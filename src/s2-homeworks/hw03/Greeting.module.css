@@ -13,6 +13,18 @@
 }
 
 .error {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 10px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+
+    color: #CC0000;
 }
 
 .input {
@@ -30,6 +42,7 @@
 }
 
 .input:focus {
+    cursor: pointer;
 }
 
 .errorInput {
@@ -68,6 +81,7 @@
 }
 
 .button:active {
+    opacity: 0.7;
 }
 
 .button:disabled {
@@ -92,4 +106,17 @@
 }
 
 .greeting {
+display: flex;
+    justify-content: flex-start;
+    padding-top: 10px;
+    padding-left: 70px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+
+    color: #000000;
 }

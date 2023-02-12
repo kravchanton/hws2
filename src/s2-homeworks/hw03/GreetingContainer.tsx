@@ -23,6 +23,8 @@ export const pureAddUser = (name: string, setError: React.Dispatch<React.SetStat
 export const pureOnBlur = (name: string, setError: React.Dispatch<React.SetStateAction<string>>) => {
     if(!name) {
         setError('Ошибка! Введите имя!')
+        lastUserName=''
+
     }
 }
 
