@@ -10,18 +10,22 @@ let totalUsers = 0 // need to fix
 let lastUserName = '' // need to fix
 
 export const pureAddUser = (name: string, setError: React.Dispatch<React.SetStateAction<string>>, setName: React.Dispatch<React.SetStateAction<string>>, addUserCallback: (name: string) => void) => {
-    if (name !== '') {
+    if (name) {
         addUserCallback(name)
+        debugger
         setName('')
         lastUserName = name
         totalUsers++
+        if(name.trim() === "") {
+            setError('Ошибка! Введите имя!')
+        }
 
     } else setError('Ошибка! Введите имя!')
     // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
 }
 
 export const pureOnBlur = (name: string, setError: React.Dispatch<React.SetStateAction<string>>) => {
-    if(!name) {
+    if(name.trim() === "") {
         setError('Ошибка! Введите имя!')
         lastUserName=''
 
@@ -48,7 +52,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     const [error, setError] = useState<string>('') // need to fix any
 
     const setNameCallback = (e: React.ChangeEvent<HTMLInputElement>) => { // need to fix any
-        setName(e.currentTarget.value.trim()) // need to fix
+        setName(e.currentTarget.value) // need to fix
 
         error && setError('')
     }
