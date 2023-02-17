@@ -47,6 +47,7 @@
     margin-left: 70px;
     margin-bottom: 45px;
     color: #000000;
+    transition: 0.2s;
 
 
 }
@@ -54,6 +55,9 @@
 .nav a:hover {
     color: #58ACFF;
     transition: 0.2s;
+}
+.nav a:active {
+    color: #3D6B99;
 }
 
 .nav a.active {
